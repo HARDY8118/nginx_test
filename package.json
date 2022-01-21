@@ -1,0 +1,10 @@
+{
+  "name": "sample-nginx-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "redis": "^4.0.2"
+  }
+}
