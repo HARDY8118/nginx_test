@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env["PORT"] || 3000;
 
 app.get("/heartbeat", (req, res) => {
+  console.log(req.headers);
   res.status(200).send("Alive");
 });
 
