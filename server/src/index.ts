@@ -1,17 +1,16 @@
 import express from "express";
-// import { Tedis } from "tedis";
-
-// const tedis = new Tedis({
-//   port: 6379,
-//   host: "store",
-//   password: process.env["STORE_PASSWORD"],
-// });
 
 const app = express();
 const PORT = process.env["PORT"] || 3000;
 
-app.get("/", (req, res) => {
-  res.send("07");
+app.get("/heartbeat", (req, res) => {
+  res.status(200).send("Alive");
+});
+
+app.get("/heartbeat/delay", (req, res) => {
+  setTimeout(() => {
+    res.status(200).send("Still Alive");
+  }, 8000);
 });
 
 app.listen(PORT, () => {

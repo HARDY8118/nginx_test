@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   nginx:
@@ -11,5 +11,21 @@ services:
       - 80:80
       - 443:443
     # environment:
-      # - NGINX_PORT=80  
-      # - NGINX_PORT=443
+    # - NGINX_PORT=80
+    # - NGINX_PORT=443
+
+  app1:
+    container_name: app1
+    build: ./server/
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+
+  app2:
+    container_name: app2
+    build: ./server/
+    ports:
+      - 3001:3001
+    environment:
+      - PORT=3001
