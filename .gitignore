@@ -1,4 +1,5 @@
 node_modules/
 
-nginx/logs/access.log
-nginx/logs/error.log
+nginx/logs/
+
+nginx/ssl/
